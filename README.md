@@ -56,7 +56,7 @@ A home security operations lab built to simulate real-world attack scenarios and
 
 ## Alerts
 
-![Kibana Alerts](alerts.png)
+![Kibana Alerts](alerts%202.png)
 
 ## Full Report
 
