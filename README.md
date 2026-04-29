@@ -52,7 +52,7 @@ A home security operations lab built to simulate real-world attack scenarios and
 
 ## Dashboard
 
-![SOC Attack Detection Dashboard](dashboard.png)
+![SOC Attack Detection Dashboard](dashboard2.png)
 
 ## Alerts
 
