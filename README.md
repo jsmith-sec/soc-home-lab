@@ -49,13 +49,14 @@ A home security operations lab built to simulate real-world attack scenarios and
 ## Full Report
 See [soc_lab_report.pdf](soc_lab_report.pdf) for the complete write-up including forensic evidence, MITRE ATT&CK mapping, and recommendations.
 
-## Tools Used
+## Tools & Assistance
 - Elastic Stack 8.19.14 (Elasticsearch, Kibana, Elastic Agent, Filebeat)
 - Kali Linux 2023
 - Nmap
 - Hydra
 - UTM (Apple Silicon virtualization)
 - Ubuntu 26.04 ARM64
+- AI assistance provided by [Claude](https://claude.ai) (Anthropic) during lab development and documentation.
 
 ## Other Labs in This Series
 
