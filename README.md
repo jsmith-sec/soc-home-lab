@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ SOC Home Lab
+# 🛡️ SOC / SIEM Detection Lab
 ### ELK Stack Attack Detection
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=800&color=2F81F7&center=true&vCenter=true&width=690&lines=Detection+Engineering+with+the+Elastic+Stack;SSH+Brute+Force+%7C+Recon+%7C+Backdoor+Detection;851+Failed+Logins+%7C+21+Alerts+%7C+6+MITRE+Techniques" alt="typing summary" />
