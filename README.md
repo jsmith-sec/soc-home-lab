@@ -65,6 +65,10 @@ A home security operations lab built to simulate real-world attack scenarios and
 - Fires on any account creation or modification event
 - Severity: High
 
+<img src="alerts%202.png" width="720" alt="Kibana Alerts">
+
+*The custom and prebuilt rules firing in Kibana — 21 alerts raised across the simulated attack chain.*
+
 ## Results
 
 - 851 failed authentication attempts captured
@@ -72,13 +76,9 @@ A home security operations lab built to simulate real-world attack scenarios and
 - Backdoor account creation detected within seconds of execution
 - All 6 MITRE ATT&CK techniques successfully logged and alerted
 
-## Dashboard
+<img src="dashboard2.png" width="720" alt="SOC Attack Detection Dashboard">
 
-![SOC Attack Detection Dashboard](dashboard2.png)
-
-## Alerts
-
-![Kibana Alerts](alerts%202.png)
+*The SOC attack-detection dashboard — failed auth attempts, top attacking IPs, and account-modification events.*
 
 ## Full Report
 
