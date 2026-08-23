@@ -24,7 +24,7 @@
 
 A home Security Operations lab that simulates a full multi-stage attack against a
 Windows endpoint and detects each stage with custom-built Elastic detection rules,
-mapped to MITRE ATT&CK. Rebuilt in 2026 from a single-box ELK setup into a
+mapped to MITRE ATT&CK. Rebuilt in August 2026 from a single-box ELK setup into a
 multi-host SOC with Fleet-managed agents and Sysmon EDR-style telemetry.
 
 > **Status: actively developed.** See the [Roadmap](#roadmap) for what is live and
