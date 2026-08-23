@@ -36,6 +36,7 @@ multi-host SOC with Fleet-managed agents and Sysmon EDR-style telemetry.
 
 A 3-node design that mirrors a real SOC: a SIEM, a monitored endpoint, and an attacker.
 
+
 | Node | Role | Details |
 |---|---|---|
 | **soc-siem** | SIEM + management | Ubuntu 26.04 (ARM64) running Elasticsearch, Kibana, and **Fleet Server**. LAN-bound at `192.168.1.56` |
@@ -142,6 +143,38 @@ to `LSASS credential dump` to `Security log cleared`
 
 Each stage generated live telemetry, fired the matching custom rule, and was
 verified in Kibana Discover before the rule was built.
+
+---
+
+## 🐧 Linux / Auth Detections (Foundation)
+
+The original build of this lab focused on Linux authentication attacks against the
+Ubuntu SIEM host, and those detections remain part of the lab (the host still ships
+`system.auth` to Elasticsearch).
+
+**Simulated from Kali:** network recon (Nmap, T1046), SSH brute force (Hydra, T1110),
+system/user discovery (T1033, T1087, T1057), backdoor account creation (T1136), and
+privilege escalation (T1078).
+
+| Detection Rule | Type | Tactic | Technique (ID) |
+|---|---|---|---|
+| SSH Brute Force | Threshold | Credential Access | Brute Force (T1110) |
+| Suspicious Account Creation/Modification | Threshold | Persistence | Create Account (T1136) |
+
+**Results:** 851 failed-authentication events captured, backdoor account creation
+detected within seconds, all mapped to MITRE ATT&CK.
+
+<div align="center">
+<img src="screenshots/linux-dashboard.png" width="820" alt="Linux auth dashboard" />
+
+*Custom Kibana dashboard: failed auth attempts, top attacking IPs, and account-modification events.*
+</div>
+
+<div align="center">
+<img src="screenshots/linux-ssh-alerts.png" width="820" alt="Linux SSH brute-force alerts" />
+
+*Custom and prebuilt rules firing in Kibana: 21 alerts across the simulated attack chain.*
+</div>
 
 ---
 
