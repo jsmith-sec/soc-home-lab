@@ -24,7 +24,7 @@
 
 A home Security Operations lab that simulates a full multi-stage attack against a
 Windows endpoint and detects each stage with custom-built Elastic detection rules,
-mapped to MITRE ATT&CK. Rebuilt in August 2026 from a single-box ELK setup into a
+mapped to MITRE ATT&CK. Rebuilt in 2026 from a single-box ELK setup into a
 multi-host SOC with Fleet-managed agents and Sysmon EDR-style telemetry.
 
 > **Status: actively developed.** See the [Roadmap](#roadmap) for what is live and
@@ -165,13 +165,13 @@ privilege escalation (T1078).
 detected within seconds, all mapped to MITRE ATT&CK.
 
 <div align="center">
-<img src="screenshots/linux-dashboard.png" width="820" alt="Linux auth dashboard" />
+<img src="screenshots/dashboard2.png" width="820" alt="Linux auth dashboard" />
 
 *Custom Kibana dashboard: failed auth attempts, top attacking IPs, and account-modification events.*
 </div>
 
 <div align="center">
-<img src="screenshots/linux-ssh-alerts.png" width="820" alt="Linux SSH brute-force alerts" />
+<img src="screenshots/alerts%202.png" width="820" alt="Linux SSH brute-force alerts" />
 
 *Custom and prebuilt rules firing in Kibana: 21 alerts across the simulated attack chain.*
 </div>
