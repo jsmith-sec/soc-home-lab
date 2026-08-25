@@ -3,7 +3,7 @@
 # 🛡️ SOC / SIEM Detection Lab
 ### Multi-Host Attack Detection with the Elastic Stack + Sysmon
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=800&color=2F81F7&center=true&vCenter=true&width=760&lines=Detection+Engineering+with+Elastic+%2B+Fleet;6+Custom+Detections+%7C+5+ATT%26CK+Tactics;Windows+Endpoint+%7C+Sysmon+%7C+EDR-style+Telemetry;Phishing+to+Persistence+to+Cred+Dumping+to+Log+Clearing" alt="typing summary" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=800&color=2F81F7&center=true&vCenter=true&width=760&lines=Detection+Engineering+with+Elastic+%2B+Fleet;7+Custom+Detections+%7C+6+ATT%26CK+Tactics;Windows+Endpoint+%7C+Sysmon+%7C+EDR-style+Telemetry;Phishing+to+Persistence+to+Cred+Dumping+to+Log+Clearing" alt="typing summary" />
 
 <p>
   <img src="https://img.shields.io/badge/Type-Defensive%20%2F%20Blue%20Team-0A2A66?style=for-the-badge" alt="type" />
@@ -52,8 +52,8 @@ System, PowerShell/Operational, and Linux `system.auth`.
 
 ## 🎯 What This Lab Detects
 
-Six custom detection rules covering a realistic intrusion end to end, across
-**five ATT&CK tactics**:
+Seven custom detection rules covering a realistic intrusion end to end, across
+**six ATT&CK tactics**:
 
 | # | Detection Rule | Tactic | Technique (ID) | Log Source | Severity |
 |---|---|---|---|---|---|
@@ -63,6 +63,7 @@ Six custom detection rules covering a realistic intrusion end to end, across
 | 4 | Scheduled Task Created via schtasks.exe | Persistence | Scheduled Task (T1053.005) | Sysmon EID 1 | Medium |
 | 5 | Credential Dumping: LSASS Memory Access | Credential Access | LSASS Memory (T1003.001) | Sysmon EID 10 | **Critical** |
 | 6 | Windows Security Event Log Cleared | Defense Evasion | Clear Windows Event Logs (T1070.001) | Windows EID 1102 | High |
+| 7 | Lateral Movement via WMI (WmiPrvSE Spawning Command Shell) | Lateral Movement / Execution | Remote Services, WMI (T1021, T1047) | Sysmon EID 1 | High |
 
 > Full mapping and tactic-coverage table: **[MITRE-ATTACK-MAPPING.md](MITRE-ATTACK-MAPPING.md)**
 
@@ -156,6 +157,7 @@ investigation, verdict, action) for three alerts from this lab:
 | 01 | [Credential Dumping (LSASS)](triage/triage-01-lsass-credential-dumping.md) | Critical | True Positive |
 | 02 | [Office Spawning PowerShell](triage/triage-02-phishing-execution.md) | High | True Positive |
 | 03 | [Benign LSASS Access](triage/triage-03-lsass-false-positive.md) | Critical | False Positive (rule tuned) |
+| 04 | [LSASS Surge from Sysmon](triage/triage-04-lsass-sysmon-false-positive.md) | Critical | False Positive (rule tuned) |
 
 Report 03 shows the full false-positive workflow: investigating benign agent
 telemetry, confirming it cannot dump credentials, and tuning the rule to remove the
@@ -205,12 +207,12 @@ This lab is under active development. Completed and planned work:
 - [x] Multi-host SIEM rebuild: Elasticsearch + Kibana + Fleet (LAN-bound)
 - [x] Windows endpoint (DC01) enrolled via Fleet with Sysmon
 - [x] Sysmon config tuning to close an EID 10 (ProcessAccess) visibility gap
-- [x] 6 custom detections across 5 ATT&CK tactics
+- [x] 7 custom detections across 6 ATT&CK tactics
 - [x] MITRE ATT&CK coverage mapping
 - [x] Analyst alert-triage investigation writeups (3 reports: 2 true positive, 1 false positive)
+- [x] Lateral movement detection via WMI (T1021 / T1047)
 
 **In progress / planned**
-- [ ] Lateral movement + remote-logon detection (T1021)
 - [ ] Threat-intel IOC enrichment (VirusTotal / AbuseIPDB)
 - [ ] SOC KPI dashboard: alert volume, detections by tactic, detection latency (MTTD)
 - [ ] Correlation rule + SOAR-lite automation
