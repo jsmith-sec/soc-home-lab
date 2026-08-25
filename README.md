@@ -24,7 +24,7 @@
 
 A home Security Operations lab that simulates a full multi-stage attack against a
 Windows endpoint and detects each stage with custom-built Elastic detection rules,
-mapped to MITRE ATT&CK. Rebuilt in August 2026 from a single-box ELK setup into a
+mapped to MITRE ATT&CK. Rebuilt in 2026 from a single-box ELK setup into a
 multi-host SOC with Fleet-managed agents and Sysmon EDR-style telemetry.
 
 > **Status: actively developed.** See the [Roadmap](#roadmap) for what is live and
@@ -178,6 +178,23 @@ detected within seconds, all mapped to MITRE ATT&CK.
 
 ---
 
+## 🔎 Analyst Triage Investigations
+
+Alert-triage writeups documenting the L1 analyst workflow (alert, triage questions,
+investigation, verdict, action) for three alerts from this lab:
+
+| # | Investigation | Severity | Verdict |
+|---|---|---|---|
+| 01 | [Credential Dumping (LSASS)](triage/triage-01-lsass-credential-dumping.md) | Critical | True Positive |
+| 02 | [Office Spawning PowerShell](triage/triage-02-phishing-execution.md) | High | True Positive |
+| 03 | [Benign LSASS Access](triage/triage-03-lsass-false-positive.md) | Critical | False Positive (rule tuned) |
+
+Report 03 shows the full false-positive workflow: investigating benign agent
+telemetry, confirming it cannot dump credentials, and tuning the rule to remove the
+noise while preserving detection of a real dump.
+
+---
+
 <a name="roadmap"></a>
 
 ## 🗺️ Roadmap
@@ -193,7 +210,7 @@ This lab is under active development. Completed and planned work:
 
 **In progress / planned**
 - [ ] Lateral movement + remote-logon detection (T1021)
-- [ ] Analyst alert-triage investigation writeups (L1 workflow)
+- [x] Analyst alert-triage investigation writeups (3 reports: 2 true positive, 1 false positive)
 - [ ] Threat-intel IOC enrichment (VirusTotal / AbuseIPDB)
 - [ ] SOC KPI dashboard: alert volume, detections by tactic, detection latency (MTTD)
 - [ ] Correlation rule + SOAR-lite automation
