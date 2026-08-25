@@ -146,6 +146,23 @@ verified in Kibana Discover before the rule was built.
 
 ---
 
+## 🔎 Analyst Triage Investigations
+
+Alert-triage writeups documenting the L1 analyst workflow (alert, triage questions,
+investigation, verdict, action) for three alerts from this lab:
+
+| # | Investigation | Severity | Verdict |
+|---|---|---|---|
+| 01 | [Credential Dumping (LSASS)](triage/triage-01-lsass-credential-dumping.md) | Critical | True Positive |
+| 02 | [Office Spawning PowerShell](triage/triage-02-phishing-execution.md) | High | True Positive |
+| 03 | [Benign LSASS Access](triage/triage-03-lsass-false-positive.md) | Critical | False Positive (rule tuned) |
+
+Report 03 shows the full false-positive workflow: investigating benign agent
+telemetry, confirming it cannot dump credentials, and tuning the rule to remove the
+noise while preserving detection of a real dump.
+
+---
+
 ## 🐧 Linux / Auth Detections (Foundation)
 
 The original build of this lab focused on Linux authentication attacks against the
@@ -175,23 +192,6 @@ detected within seconds, all mapped to MITRE ATT&CK.
 
 *Custom and prebuilt rules firing in Kibana: 21 alerts across the simulated attack chain.*
 </div>
-
----
-
-## 🔎 Analyst Triage Investigations
-
-Alert-triage writeups documenting the L1 analyst workflow (alert, triage questions,
-investigation, verdict, action) for three alerts from this lab:
-
-| # | Investigation | Severity | Verdict |
-|---|---|---|---|
-| 01 | [Credential Dumping (LSASS)](triage/triage-01-lsass-credential-dumping.md) | Critical | True Positive |
-| 02 | [Office Spawning PowerShell](triage/triage-02-phishing-execution.md) | High | True Positive |
-| 03 | [Benign LSASS Access](triage/triage-03-lsass-false-positive.md) | Critical | False Positive (rule tuned) |
-
-Report 03 shows the full false-positive workflow: investigating benign agent
-telemetry, confirming it cannot dump credentials, and tuning the rule to remove the
-noise while preserving detection of a real dump.
 
 ---
 
