@@ -207,10 +207,10 @@ This lab is under active development. Completed and planned work:
 - [x] Sysmon config tuning to close an EID 10 (ProcessAccess) visibility gap
 - [x] 6 custom detections across 5 ATT&CK tactics
 - [x] MITRE ATT&CK coverage mapping
+- [x] Analyst alert-triage investigation writeups (3 reports: 2 true positive, 1 false positive)
 
 **In progress / planned**
 - [ ] Lateral movement + remote-logon detection (T1021)
-- [x] Analyst alert-triage investigation writeups (3 reports: 2 true positive, 1 false positive)
 - [ ] Threat-intel IOC enrichment (VirusTotal / AbuseIPDB)
 - [ ] SOC KPI dashboard: alert volume, detections by tactic, detection latency (MTTD)
 - [ ] Correlation rule + SOAR-lite automation
@@ -223,7 +223,7 @@ Elastic Stack 8.19 (Elasticsearch, Kibana, Fleet, Elastic Agent), Sysmon
 (SwiftOnSecurity config), Windows Server 2022, Kali Linux, UTM and Oracle
 VirtualBox virtualization, MITRE ATT&CK.
 
-*AI assistance (Claude, Anthropic) was used during lab development and documentation.*
+*AI (Claude, Anthropic) was used as a learning and documentation aid. All detections were designed, built, tested, and validated by me.*
 
 ---
 
