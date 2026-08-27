@@ -13,10 +13,10 @@
 
 <!-- Highlights / KPI row -->
 <p>
-  <img src="https://img.shields.io/badge/Custom_Detections-7-2F81F7?style=flat-square" alt="detections" />
-  <img src="https://img.shields.io/badge/ATT%26CK_Tactics-6-2F81F7?style=flat-square" alt="tactics" />
-  <img src="https://img.shields.io/badge/Triage_Reports-4-2F81F7?style=flat-square" alt="triage" />
-  <img src="https://img.shields.io/badge/Hosts-3-2F81F7?style=flat-square" alt="hosts" />
+  <a href="#detects"><img src="https://img.shields.io/badge/Custom_Detections-7-2F81F7?style=flat-square" alt="detections" /></a>
+  <a href="MITRE-ATTACK-MAPPING.md"><img src="https://img.shields.io/badge/ATT%26CK_Tactics-6-2F81F7?style=flat-square" alt="tactics" /></a>
+  <a href="#triage"><img src="https://img.shields.io/badge/Triage_Reports-4-2F81F7?style=flat-square" alt="triage" /></a>
+  <a href="#architecture"><img src="https://img.shields.io/badge/Hosts-3-2F81F7?style=flat-square" alt="hosts" /></a>
 </p>
 
 <!-- Tech row -->
