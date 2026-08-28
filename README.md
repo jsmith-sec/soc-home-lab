@@ -229,7 +229,7 @@ rather than on hashes alone.
   <img src="screenshots/08-threatintel-procdump-vt.png" width="400" alt="procdump 0/71" />
   <img src="screenshots/08-threatintel-freshmalware-vt.png" width="400" alt="fresh infostealer 5/74" />
   <br/>
-  <sub><i>Left: a legitimate tool used to dump LSASS, clean at 0/71. Right: a confirmed infostealer first seen the same day, only 5/74 because signatures lag.</i></sub>
+  <sub><i>procdump, a legitimate tool used to dump LSASS, is clean at 0/71. The confirmed infostealer, first seen the same day, is flagged by only 5/74 because signatures lag.</i></sub>
 </div>
 
 ---
