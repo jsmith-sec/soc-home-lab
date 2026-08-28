@@ -36,6 +36,7 @@
   <a href="#deep-dive"><b>Deep Dive</b></a> &nbsp;·&nbsp;
   <a href="#triage"><b>Triage</b></a> &nbsp;·&nbsp;
   <a href="#threatintel"><b>Threat Intel</b></a> &nbsp;·&nbsp;
+  <a href="#dashboard"><b>Dashboard</b></a> &nbsp;·&nbsp;
   <a href="#roadmap"><b>Roadmap</b></a>
 </p>
 
@@ -233,6 +234,26 @@ rather than on hashes alone.
 
 ---
 
+<a id="dashboard"></a>
+## 📊 SOC KPI Dashboard
+
+A single-pane operational view in Kibana that presents the lab from a SOC manager's
+perspective: not individual alerts, but the health of the detection program as a whole.
+
+- **KPI tiles:** total alerts, critical alerts, open (needs triage), and distinct detection rules firing
+- **Alert volume over time:** the attack bursts as distinct spikes on a time axis
+- **Detections by rule:** which rules generate the workload (LSASS dominates)
+- **Severity breakdown:** color-coded Critical / High / Medium, the real-console convention
+- **Triage status:** open vs closed, showing the alert queue was actually worked
+
+<div align="center">
+  <img src="screenshots/09-soc-kpi-dashboard.png" width="880" alt="SOC KPI dashboard" />
+  <br/>
+  <sub><i>SOC KPI dashboard. The critical-alert spike is the LSASS false-positive surge (Triage reports 03 and 04); 86% of alerts were triaged and closed, the outcome of the tuning work.</i></sub>
+</div>
+
+---
+
 ## 🐧 Linux / Auth Detections (Foundation)
 
 The original build of this lab focused on Linux authentication attacks against the
@@ -277,9 +298,9 @@ This lab is under active development. Completed and planned work:
 - [x] Analyst alert-triage investigation writeups (4 reports: 2 true positive, 2 false positive)
 - [x] Lateral movement detection via WMI (T1021 / T1047)
 - [x] Threat-intel IOC enrichment (VirusTotal): dual-use vs fresh-malware contrast
+- [x] SOC KPI dashboard: KPI tiles, alert volume, detections by rule, severity, triage status
 
 **In progress / planned**
-- [ ] SOC KPI dashboard: alert volume, detections by tactic, detection latency (MTTD)
 - [ ] Correlation rule + SOAR-lite automation
 
 ---
@@ -312,4 +333,4 @@ verifying each command and result independently.
 | Lab 4 | Vulnerability Assessment | [vulnerability-assessment-lab](https://github.com/jsmith-sec/vulnerability-assessment-lab) |
 | Lab 5 | Malware Analysis | [malware-analysis-lab](https://github.com/jsmith-sec/malware-analysis-lab) |
 | Lab 6 | Phishing Analysis | [phishing-analysis-lab](https://github.com/jsmith-sec/phishing-analysis-lab) |
-| Lab 7 | Active Directory Attack & Defense | [active-directory-lab](https://github.com/jsmith-sec/active-directory-lab) |
+| Lab 7 | Active Directory Attack | [active-directory-lab](https://github.com/jsmith-sec/active-directory-lab) |
