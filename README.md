@@ -8,7 +8,7 @@
 <p>
   <a href="https://github.com/jsmith-sec/soc-siem-lab"><img src="https://img.shields.io/badge/Type-Defensive%20%2F%20Blue%20Team-0A2A66?style=for-the-badge" alt="type" /></a>
   <a href="https://github.com/jsmith-sec/soc-siem-lab"><img src="https://img.shields.io/badge/Mapped%20to-MITRE%20ATT%26CK-2F81F7?style=for-the-badge" alt="mitre" /></a>
-  <a href="https://github.com/jsmith-sec/soc-siem-lab"><img src="https://img.shields.io/badge/Status-Actively%20Developed-0A2A66?style=for-the-badge" alt="status" /></a>
+  <a href="https://github.com/jsmith-sec/soc-siem-lab"><img src="https://img.shields.io/badge/Status-Roadmap%20Complete-0A2A66?style=for-the-badge" alt="status" /></a>
 </p>
 
 <!-- Highlights / KPI row -->
@@ -47,7 +47,7 @@ Windows endpoint and detects each stage with custom-built Elastic detection rule
 mapped to MITRE ATT&CK. Rebuilt in 2026 from a single-box ELK setup into a
 multi-host SOC with Fleet-managed agents and Sysmon EDR-style telemetry.
 
-> **Status: actively developed.** See the [Roadmap](#roadmap) for what is live and what is in progress.
+> **Status: core roadmap complete.** See the [Roadmap](#roadmap) for everything that was built.
 
 ---
 
@@ -287,7 +287,7 @@ detected within seconds, all mapped to MITRE ATT&CK.
 <a name="roadmap"></a>
 ## 🗺️ Roadmap
 
-This lab is under active development. Completed and planned work:
+The core roadmap for this lab is complete. Everything built:
 
 **Done**
 - [x] Multi-host SIEM rebuild: Elasticsearch + Kibana + Fleet (LAN-bound)
@@ -299,9 +299,6 @@ This lab is under active development. Completed and planned work:
 - [x] Lateral movement detection via WMI (T1021 / T1047)
 - [x] Threat-intel IOC enrichment (VirusTotal): dual-use vs fresh-malware contrast
 - [x] SOC KPI dashboard: KPI tiles, alert volume, detections by rule, severity, triage status
-
-**In progress / planned**
-- [ ] Correlation rule + SOAR-lite automation
 
 ---
 
