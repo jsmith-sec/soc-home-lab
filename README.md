@@ -47,12 +47,10 @@ Windows endpoint and detects each stage with custom-built Elastic detection rule
 mapped to MITRE ATT&CK. Rebuilt in 2026 from a single-box ELK setup into a
 multi-host SOC with Fleet-managed agents and Sysmon EDR-style telemetry.
 
-> **Status: core roadmap complete.** See the [Roadmap](#roadmap) for everything that was built.
-
 ---
 
 <a id="architecture"></a>
-## 🖥️ Lab Architecture
+## Lab Architecture
 
 A 3-node design that mirrors a real SOC: a SIEM, a monitored endpoint, and an attacker.
 
@@ -70,7 +68,7 @@ System, PowerShell/Operational, and Linux `system.auth`.
 ---
 
 <a id="detects"></a>
-## 🎯 What This Lab Detects
+## What This Lab Detects
 
 Seven custom detection rules covering a realistic intrusion end to end, across **six ATT&CK tactics**:
 
@@ -166,7 +164,7 @@ produces.
 
 ---
 
-## 🧪 Attack Chain Simulated
+## Attack Chain Simulated
 
 All attacker actions were run from the Ubuntu attacker box or on DC01 in the isolated lab,
 using benign payloads (calc.exe) that produce the same telemetry as real malware:
@@ -203,7 +201,7 @@ real dump.
 ---
 
 <a id="threatintel"></a>
-## 🧠 Threat Intelligence Enrichment
+## Threat Intelligence Enrichment
 
 Enrichment is the analyst-desk skill of taking an artifact from an alert (a file
 hash, an IP, a domain) and looking it up against public intelligence to answer one
@@ -254,7 +252,7 @@ perspective: not individual alerts, but the health of the detection program as a
 
 ---
 
-## 🐧 Linux / Auth Detections (Foundation)
+## Linux / Auth Detections (Foundation)
 
 The original build of this lab focused on Linux authentication attacks against the
 Ubuntu SIEM host, and those detections remain part of the lab (the host still ships
@@ -310,7 +308,7 @@ VirtualBox virtualization, MITRE ATT&CK.
 
 ---
 
-## 🤖 Using Claude as a Tool
+## Using Claude as a Tool
 
 I used Claude (Anthropic) as a tool throughout this lab, the same way I use it across
 the series. It helped me walk through each stage, deepen my understanding of the
